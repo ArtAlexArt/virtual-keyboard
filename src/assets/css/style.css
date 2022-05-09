@@ -1,0 +1,151 @@
+
+.wrapper {
+  margin: 0 auto;
+  font-family: "Helvetica","Arialregular",  sans-serif;
+}
+.textarea {
+  display: block;
+  width: 44em; 
+  height: 20em; 
+  /* 200px; */
+  margin: 0.625em auto 0.625em;
+  padding: 0.625em;
+  /* font-size: 16px; */
+  border-radius: 0.625em;
+  color: #444444;
+}
+.caseDown,
+.caseUp,
+.caseShift,
+.caseShiftCapsLock {
+  display: block;
+  width: 100;
+  min-height: 2.5em;
+}
+.hidden {
+  display: none;
+}
+
+.info,
+.title {
+  margin: 1em auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2em;
+  color: rgba(52, 64, 170, 0.8);
+  /* -webkit-text-stroke: 1px rgba(114, 177, 101, 0.8); */
+  /* -webkit-text-fill-color: rgba(101, 134, 177, 0.8); */
+}
+
+@keyframes creditShake {
+  0% {
+            transform: translateX(2px); }
+  20% {
+            transform: translateX(-2px); }
+  40% {
+            transform: translateX(2px); }
+  60% {
+            transform: translateX(-2px); }
+  80% {
+            transform: translateX(2px); }
+  100% {
+            transform: translateX(0px); } }
+
+.keyboard {
+  width: 44em;
+  margin: 0 auto;
+  padding: 0.3125em;
+  padding-left: 0;
+  padding-bottom: 0;
+  background: #888888;
+  border: 0.1875em solid #222222;
+  border-radius: 0.3125em;
+}
+.row {
+  clear: both;
+  width: 100%;
+  height: 2.5em;
+  margin-bottom: 0.5em;
+}
+.key {
+  width: 2.5em;
+  height: 100%;
+  margin-left: 0.375em;
+  float: left;
+  font-weight: 600;
+  line-height: 2.5em;
+  text-align: center;
+  color: #06bfed;
+  background: #414141;
+  border-radius: 0.625em;
+  cursor: pointer;
+  transition: border-radius 0.3s , background-color 0.3s; 
+}
+ .key:hover {
+  animation: creditShake 0.2s linear forwards,
+ ligth 0.6s linear 0.25s infinite;
+ background-color: #000000;
+ }
+
+.key.active {
+  background-color: #2cfd72;
+  border-radius: 0.625em;
+}
+.Delete {
+  width: 2.75em;
+}
+.Enter,
+.ShiftRight {
+  width: 5.375em;
+}
+.Space {
+  width: 20.625em;
+}
+.Tab {
+  width: 3.125em;
+}
+.Backspace,
+.CapsLock,
+.ShiftLeft {
+  width: 6.25em;
+}
+.AltLeft,
+.AltRight,
+.ArrowUp,
+.ArrowLeft,
+.ArrowDown,
+.ArrowRight,
+.Backspace,
+.CapsLock,
+.ControlLeft,
+.ControlRight,
+.Delete,
+.Enter,
+.ShiftLeft,
+.ShiftRight,
+.Tab,
+.MetaLeft {
+  background-color: #03153b;
+}
+
+
+
+@media (max-width: 767px) {
+  html {
+    font-size: 12px;
+  }  
+}
+
+@media (max-width: 567px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 490px) {
+  html {
+    font-size: 8px;
+  }
+}

@@ -1,3 +1,6 @@
+/* eslint-disable no-nested-ternary */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable guard-for-in */
 const keys = [
   // row1
   {
@@ -90,3 +93,66 @@ let lang = localStorage.getItem('lang') || 'en';
 let curPos = 0;
 let curPosNew = curPos;
 
+
+
+
+const keyboard = {
+  elements: {
+    main: null,
+    textarea: null,
+    keysContainer: null,
+    keys: null,
+    capsLock: null,
+    shiftLeft: null,
+    ShiftRight: null
+  },
+
+  properties: {
+    capsLock: false, shift: false
+  },
+
+  init() {
+    const header = document.createElement('h1');
+    header.innerHTML = 'RSS Virtual Keyboard';
+    header.classList.add('title');
+
+    const info1 = document.createElement('p');
+    info1.innerText = 'Клавиатура создана в ОС: Windows';
+    info1.classList.add('info');
+
+    const info2 = document.createElement('p');
+    info2.innerText = 'Для переключения языка комбинация: CtrlLeft + Alt';
+    info2.classList.add('info');
+
+    const textarea = document.createElement('textarea');
+    curPos = textarea.selectionStart;
+    textarea.classList.add('body--textarea', 'textarea');
+    textarea.id = 'textarea';
+
+    this.elements.main = document.createElement('div');
+    this.elements.main.classList.add('wrapper');
+    this.elements.main.appendChild(header);
+    this.elements.main.appendChild(textarea);
+    this.elements.textarea = textarea;
+    this.elements.main.appendChild(info1);
+    this.elements.main.appendChild(info2);
+
+    const keyboardTemp = document.createElement('div');
+    keyboardTemp.classList.add('body--keyboard', 'keyboard', 'keyboard--hidden');
+    this.elements.main.appendChild(keyboardTemp);
+
+    this.elements.keysContainer = document.createElement('div');
+    this.elements.keysContainer.classList.add('keyboard__keys');
+
+    this.elements.keysContainer.appendChild(this.createKeys());
+    this.elements.keys = this.elements.keysContainer.querySelectorAll('.keyboard__key');
+    keyboardTemp.appendChild(this.elements.keysContainer);
+    document.body.appendChild(this.elements.main);
+  },
+
+ };
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  keyboard.init();
+});

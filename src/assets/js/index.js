@@ -78,7 +78,7 @@ const keys = [
     ControlRight: [['Ctrl', 'Ctrl', 'Ctrl', 'Ctrl'], ['Ctrl', 'Ctrl', 'Ctrl', 'Ctrl'], 17]
   }];
 
-const sp = ['caseDown', 'caseUp', 'caseShift', 'caseShiftCapsLock'];
+const sp = [ 'caseDown', 'caseUp', 'caseShift', 'caseShiftCapsLock'];
 
 const myAudio = [];
 
